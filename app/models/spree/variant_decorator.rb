@@ -1,6 +1,6 @@
 Spree::Variant.class_eval do
   has_many :sale_prices, through: :prices
-  money_methods :original_price, :price_price
+  money_methods :original_price
   delegate :sale_price, :original_price, :on_sale?, to: :default_price
 
   def put_on_sale value, params={}
