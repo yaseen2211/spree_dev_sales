@@ -54,7 +54,8 @@ Spree::Price.class_eval do
   end
 
   def price
-    on_sale? ? sale_price : original_price
+    #on_sale? ? sale_price : original_price
+    original_price
   end
 
   def amount
